@@ -123,23 +123,6 @@ Build out Authentication, Models, schema, associations & validations.
 
 Oauth cheatsheet:
 
-## Configuration (environment variables/other stuff in config folder)
-config/initializers/devise.rb
-```
-config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH_CLIENT_ID'], ENV['GOOGLE_OAUTH_CLIENT_SECRET']
-``` 
-.env
-```
-GOOGLE_OAUTH_CLIENT_ID='your_id_goes_here'
-GOOGLE_OAUTH_CLIENT_SECRET='your_secret_here'
-```
-add the .env file to the .gitignore file.
-Also, we need to go create the application on the google developer platform and get the credentials from there. (As well as specify the authorized redirect URI to be http://localhost:3000/users/auth/google_oauth2/callback)
-We had to configure the consent screen on the console. This required us to set the domain. We used this domain: lvh.me/ (an alias for localhost). After we'd configured the consent screen we were able to follow the instructions in the medium article below. The credentials we create will be stored in a .env file, though, not inside of development.rb. And, .env will be gitignored.
-Resources:
-https://ktor.io/docs/guides-oauth.html
-https://medium.com/@adamlangsner/google-oauth-rails-5-using-devise-and-omniauth-1b7fa5f72c8e
-
 ## Database
 add columns to user table for full_name, uid, email and avatar_url
 ## Models
