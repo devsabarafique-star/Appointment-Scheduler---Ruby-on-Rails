@@ -139,13 +139,7 @@ add devise: :omniauthable, omniauth_providers: [:google_oauth_2]
     byebug
   end
   ```
-## Views
-add link to sign in with google (in our case Devise did that for us, but if we wanted to add a custom image we could use a syntax like this: https://stackoverflow.com/questions/43280001/rails-image-as-a-link/48630860#48630860)
-```
-<%= link_to(user_google_oauth2_omniauth_authorize_path) do %>
-  <%= image_tag(my.image, class: 'product-image__img') if product.image.attached? %>
-<% end %>
-```
+
 ## Controllers
 create a Users::OmniauthCallbacksController file in app/controllers/users/omniauth_callbacks_controller.rb
 ```rb
