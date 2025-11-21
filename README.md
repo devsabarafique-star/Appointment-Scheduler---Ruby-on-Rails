@@ -1,7 +1,3 @@
-# Appointment Scheduler Rails
-
-Youtube playlist of build: https://www.youtube.com/playlist?list=PLi0yUl9brD2Oktjm4yytMjVN8FCTEUHuQ
-
 # Doctor, Patient, Appointment
 ## What is the Many to many relationship and how is it used?
 Doctors <=> Patients, we have a view to display all of a doctor's patients and a view to display all of a patient's doctors:
@@ -127,10 +123,6 @@ Build out Authentication, Models, schema, associations & validations.
 
 Oauth cheatsheet:
 
-## Dependencies (Gems/packages)
-omniauth
-omniauth-google-oauth2
-dotenv-rails
 ## Configuration (environment variables/other stuff in config folder)
 config/initializers/devise.rb
 ```
@@ -213,8 +205,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @auth ||= request.env['omniauth.auth']
   end
 end
-```
-## Routes
-```rb
-devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 ```
